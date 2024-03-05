@@ -1,29 +1,25 @@
-import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './Button.module.scss'
-import { FC } from 'react';
+import cls from './Button.module.scss';
+import { type FC } from 'react';
 
-
-export enum ThemeButton{
+export enum ThemeButton {
     CLEAR = 'clear',
 }
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ThemeButton;
 }
 
-export const Button: FC<ButtonProps> = (props) => {
-    
-    const {
-        className,
-        children,
-        theme,
-        ...otherProps
-    } = props;
-    
+export const Button: FC<ButtonProps> = props => {
+    const { className, children, theme, ...otherProps } = props;
+
     return (
-        <button className={classNames(cls.Button, {[cls[theme]]: true}, [className])}
+        <button
+            type="button"
+            className={classNames(cls.Button, { [cls[theme]]: true }, [
+                className,
+            ])}
             {...otherProps}
         >
             {children}
