@@ -7,6 +7,7 @@ module.exports = {
         'standard-with-typescript',
         'plugin:react/recommended',
         'plugin:prettier/recommended',
+        'plugin:i18next/recommended',
     ],
     overrides: [
         {
@@ -23,7 +24,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react'],
+    plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-filename-extension': [
@@ -36,23 +37,25 @@ module.exports = {
         indent: [2, 4],
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/prefer-nullish-coalescing": "off",
-        "prettier/prettier": [
-            "error",
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/prefer-nullish-coalescing': 'off',
+        'prettier/prettier': [
+            'error',
             {
-              "singleQuote": true,
-              "parser": "typescript",
-              "endOfLine": "auto",
-            }
+                singleQuote: true,
+                parser: 'typescript',
+                endOfLine: 'auto',
+            },
         ],
-        "@typescript-eslint/strict-boolean-expressions": "off",
-        "no-used-vars": "off",
-        "@typescript-eslint/consistent-type-imports": "off",
-        "@typescript-eslint/no-confusing-void-expression": "off",
-        "@typescript-eslint/no-floating-promises": "off",
-        "@typescript-eslint/ban-ts-comment": "off",
-        "react/no-deprecated": "off",
-        "@typescript-eslint/naming-convention": "off",
+        '@typescript-eslint/strict-boolean-expressions': 'off',
+        'no-used-vars': 'off',
+        '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/no-confusing-void-expression': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
+        'react/no-deprecated': 'off',
+        '@typescript-eslint/naming-convention': 'off',
+        'i18next/lo-literal-string': ['error', { markupOnly: true }],
+        'i18next/lo-literal-string': 'off',
     },
 };

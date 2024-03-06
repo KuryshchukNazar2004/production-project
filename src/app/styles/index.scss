@@ -1,19 +1,19 @@
-@import 'reset.scss';
-@import 'variables/global.scss';
-@import 'themes/normal.scss';
-@import 'themes/dark.scss';
+@import url('reset.scss');
+@import url('variables/global.scss');
+@import url('themes/normal.scss');
+@import url('themes/dark.scss');
 
 .app {
-    font: vat(--font-m);
+    font: var(--font-m);
     background: var(--bg-color);
     color: var(--primary-color);
-
     min-height: 100vh;
 }
 
 .content-page {
     display: flex;
 }
+
 .pafe-wrapper {
     flex-grow: 1;
     padding: 20px;
